@@ -79,7 +79,7 @@ function displayJobs(jobData) {
         // Skapa en knapp för att ta bort jobbet
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Ta bort';
-        deleteButton.addEventListener('click', () => confirmDelete(job.id)); // Anropa deleteJobs när knapp klickas på
+        deleteButton.addEventListener('click', () => confirmDelete(job.id)); // Anropa confirmDelete när knapp klickas på
         jobContainer.appendChild(deleteButton);
 
         // Lägg till jobb-container i allJobs
@@ -181,7 +181,7 @@ async function addNewJob(e) {
     }
 }
 
-// Funktion för att bekräfta borttagning av jobb
+/* Funktion för att bekräfta borttagning av jobb */
 function confirmDelete(jobId) {
     const confirmation = confirm("Vill du ta bort detta jobb?");
 
