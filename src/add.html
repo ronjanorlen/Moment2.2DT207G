@@ -19,7 +19,25 @@
            </ul>
         </nav>
     </header>
+    <main>
     <h1>Lägg till-sida</h1>
     <!--- Här lägger man till ett jobb -->
+    <form id="addJobForm">
+        <label for="companyname">Företag:</label><br>
+        <input type="text" name="companyname" id="companyname"><br>
+        <label for="jobtitle">Titel:</label><br>
+        <input type="text" name="jobtitle" id="jobtitle"><br>
+        <label for="location">Plats:</label><br>
+        <input type="text" name="location" id="location"><br>
+        <label for="startdate">Startdatum:</label><br>
+        <input type="date" name="startdate" id="startdate"><br>
+        <label for="enddate">Slutdatum:</label><br>
+        <input type="date" name="enddate" id="enddate"><br>
+        <label for="description">Beskrivning:</label><br>
+        <textarea name="description" id="description"></textarea><br>
+        <input type="submit" value="Lägg till arbete">
+    </form>
+
+</main>
 </body>
 </html>
