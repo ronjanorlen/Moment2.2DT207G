@@ -11,14 +11,8 @@ async function init() {
         const response = await fetch(url);
         let jobData = await response.json();
 
-        // Hämta URL för aktuell sida 
-        const currentPageUrl = window.location.href;
-
-        // Kontroll om aktuell sida är startsida 
-        if (currentPageUrl.includes("index.html")) {
-            // Om ja - kör displayJobs-funktionen
             displayJobs(jobData);
-        }
+        
 
     } catch (e) {
         console.log(e);
@@ -29,9 +23,11 @@ async function init() {
 
 /* Visa jobb som lagts till */
 function displayJobs(jobData) {
+// Kontrollera om vi är på startsidan (index.html)
+if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
     const jobEl = document.getElementById('allJobs');
 
-    // Kontrollera om jobEl är null
+    // Kontrollera om jobEl är null, isåfall kör inte vidare
     if (!jobEl) {
         console.error("Hittar inte id 'allJobs'.");
         return;
@@ -85,6 +81,7 @@ function displayJobs(jobData) {
         // Lägg till jobb-container i allJobs
         jobEl.appendChild(jobContainer);
     });
+}
 }
 
 /* För att lägga till nya jobb */
@@ -140,7 +137,7 @@ async function addNewJob(e) {
     }
 
     // Gör ett objekt med info från formulär
-    const myJob = {
+    let myJob = {
         companyname: companynameInput.value.trim(),
         jobtitle: jobtitleInput.value.trim(),
         location: locationInput.value.trim(),

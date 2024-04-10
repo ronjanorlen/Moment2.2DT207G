@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: beige;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+/* Design av huvudmeny med nestlad regel */
+header {
+    height: 100px;
+    background-color: rgba(36, 38, 51);
+    position: relative;
+    margin: 0;
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /*.logo img {
+        border-radius: 50%;
+    } */
+}
+
+nav {
+    background-color: rgba(36, 38, 51);
+    font-size: 16px;
+    width: 100%; 
+    display: flex; 
+    justify-content: flex-end; 
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; 
+}
+
+li {
+    padding: 0.8em 1em; 
+}
+
+a {
+    color: red;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#jobContainer {
+    width: 60%;
+    background-color: bisque;
+}
