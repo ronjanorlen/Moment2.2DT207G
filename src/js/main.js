@@ -8,8 +8,14 @@ init();
 /* Hämta webbtjänst */
 async function init() {
     try {
+        // Visa laddningsmeddelande 
+        showLoadingMessage();
+
         const response = await fetch(url);
         let jobData = await response.json();
+
+        // Dölj laddningsmeddelandet när innehållet har laddats och visas
+        hideLoadingMessage();
 
             displayJobs(jobData);
         
@@ -20,6 +26,21 @@ async function init() {
     }
 }
 
+/* Visa laddningsmeddelande */
+function showLoadingMessage() {
+    const loadingMessage = document.getElementById('loadingMessage');
+    if (loadingMessage) {
+        loadingMessage.style.display = 'block';
+    }
+}
+
+/* Dölj laddningsmeddelande */
+function hideLoadingMessage() {
+    const loadingMessage = document.getElementById('loadingMessage');
+    if (loadingMessage) {
+        loadingMessage.style.display = 'none';
+    }
+}
 
 /* Visa jobb som lagts till */
 function displayJobs(jobData) {

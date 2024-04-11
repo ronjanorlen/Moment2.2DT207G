@@ -14,6 +14,6 @@ På Lägg till-sidan finns en formulär för att lägga till nya arbetserfarenhe
 så att alla fält fylls i. Om något fält är missat får användaren en notifiering om detta.
 När allting är ifyllt och submit-knappen har klickats på skickas besökaren tillbaka till startsidan och kan se det nya jobbet i listan. 
 
-Applikationen är byggd med Parcel för en automatiserad utvecklingsmiljö och har publicerats till Render.
+Applikationen använder Parcel för en automatiserad utvecklingsmiljö och har publicerats till Netlify.
 
 Av: Ronja Norlén, rono2300, 2024
