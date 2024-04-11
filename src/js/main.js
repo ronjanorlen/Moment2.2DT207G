@@ -23,6 +23,7 @@ async function init() {
 
 /* Visa jobb som lagts till */
 function displayJobs(jobData) {
+
 // Kontrollera om vi är på startsidan (index.html)
 if (window.location.pathname === "/index.html" || window.location.pathname === "/") {
     const jobEl = document.getElementById('allJobs');
@@ -57,12 +58,16 @@ if (window.location.pathname === "/index.html" || window.location.pathname === "
         listItemLocation.textContent = "Plats: " + job.location;
         ul.appendChild(listItemLocation);
 
+        // Formatera start- och slutdatum
+        const startDate = new Date(job.startdate);
+        const endDate = new Date(job.enddate);
+
         const listItemStartDate = document.createElement('li');
-        listItemStartDate.textContent = "Startdatum: " + job.startdate;
+        listItemStartDate.textContent = "Startdatum: " + startDate.toLocaleDateString('sv-SE');
         ul.appendChild(listItemStartDate);
 
         const listItemEndDate = document.createElement('li');
-        listItemEndDate.textContent = "Slutdatum: " + job.enddate;
+        listItemEndDate.textContent = "Slutdatum: " + endDate.toLocaleDateString('sv-SE');
         ul.appendChild(listItemEndDate);
 
         const listItemDescription = document.createElement('li');
@@ -75,6 +80,7 @@ if (window.location.pathname === "/index.html" || window.location.pathname === "
         // Skapa en knapp för att ta bort jobbet
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'Ta bort';
+        deleteButton.id = 'deleteBtn';
         deleteButton.addEventListener('click', () => confirmDelete(job.id)); // Anropa confirmDelete när knapp klickas på
         jobContainer.appendChild(deleteButton);
 
