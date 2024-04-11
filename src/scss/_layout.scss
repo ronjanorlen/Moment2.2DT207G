@@ -26,7 +26,6 @@ main {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 /* Design av huvudmeny */
 header {
     height: 100px;
@@ -69,6 +68,7 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Rubriker och paragraf */
 h1 {
     font-size: base.$header-font-size;
     text-transform: uppercase;
@@ -93,7 +93,7 @@ p {
     line-height: 1.6em;
     margin: 2% 5%;
 }
-
+/* Container som innehåller alla jobb på startsidan */
 #allJobs {
     width: 85%;
     margin: 0 auto;
