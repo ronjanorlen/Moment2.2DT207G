@@ -26,22 +26,6 @@ main {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-h1 {
-    font-size: base.$header-font-size;
-    text-transform: uppercase;
-}
-
-h2 {
-    font-size: base.$second-header-font-size;
-    text-align: center;
-    margin-bottom: 8%;
-}
-
-h3 {
-    font-size: base.$jobcontainer-header;
-    font-weight: base.$font-weight;
-    margin-bottom: 3%;
-}
 
 /* Design av huvudmeny */
 header {
@@ -53,10 +37,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    /*.logo img {
-        border-radius: 50%;
-    } */
 }
 
 nav {
@@ -89,6 +69,31 @@ a:hover {
     text-decoration: underline;
 }
 
+h1 {
+    font-size: base.$header-font-size;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: base.$second-header-font-size;
+    text-align: center;
+    margin-bottom: 8%;
+}
+
+h3 {
+    font-size: base.$jobcontainer-header;
+    font-weight: base.$font-weight;
+    margin-bottom: 3%;
+}
+
+p {
+    max-width: 75ch;
+    line-height: 1.6em;
+    margin: 2% 5%;
+}
+
 #allJobs {
     width: 85%;
     margin: 0 auto;
@@ -112,7 +117,6 @@ a:hover {
 }
 
 /* Footer */
-
 footer {
     display: flex;
     justify-content: center;
@@ -127,4 +131,42 @@ footer {
     padding: 0;
     line-height: 1.8rem;
     text-align: center;
+}
+
+// Media queries //
+
+/* Små skärmar */
+@media only screen and (max-width: 600px) {
+
+    nav {
+        justify-content: center;
+    }
+
+    ul {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav li {
+        padding: 1em 10px;
+        font-size: 18px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.8em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+        margin-bottom: 15%;
+    }
+
+    p{
+        text-align: center;
+    }
+
 }

@@ -217,4 +217,3 @@ async function deleteJob(id) {
         console.error('Error:', error);
     }
 }
-
